@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example</title>
+    <script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous">
+    </script>
+    <style>
+        h1 {
+            width: 700px; border: thick double black; margin-left: auto;
+            margin-right: auto; text-align: center; font-size: x-large; padding: .5em;
+            color: darkgreen; background-image: url("border.png");
+            background-size: contain; margin-top: 0;
+        }
+        .dtable {display: table;}
+        .drow {display: table-row;}       
+        .dcell {display: table-cell; padding: 10px;}
+        .dcell > * {vertical-align: middle}
+        input {width: 2em; text-align: right; border: thin solid black; padding: 2px;}
+        label {width: 5em;  padding-left: .5em;display: inline-block;}
+        #buttonDiv {text-align: center;}
+        #oblock {display: block; margin-left: auto; margin-right: auto; width: 700px;}
+        img {border: 5px solid transparent}
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('button').bind('click', false);
+            $('img').bind('mouseenter', function() {
+                $(this).css('border', '1px solid red');
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Jacqui's Flower Shop</h1>
+    <form method="post" action="http://node.jacquisflowershop.com/order">
+        <div id="oblock">        
+            <div class="dtable">
+                <div id="row1" class="drow">
+                </div>
+                <div id="row2"class="drow">
+                </div>            
+            </div>
+        </div>
+        <div>
+            <h2>One more title</h2>
+        </div>
+        <div id="buttonDiv"><button type="submit">Place Order</button></div>                    
+    </form>
+</body>
+</html>
